@@ -4,25 +4,31 @@
 
 header {
   background-color: #fff;
-  border-bottom: 1px solid#DDE1E6;
+  border-bottom: 1px solid #dde1e6;
   padding: 16px 0;
-}
-header .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav ul {
-  display: flex;
-  gap: 16px;
-}
-nav li a {
-  font-size: 16px;
-  font-weight: 500;
-  color: #21272a;
-  padding: 12px 8px;
-}
 
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 16px;
+    }
+
+    li {
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #21272a;
+        padding: 12px 8px;
+      }
+    }
+  }
+}
 /* #endregion Header */
 
 /* #region Hero */
@@ -30,52 +36,54 @@ nav li a {
 .hero-section {
   padding: 88px 0 80px 0;
   background: linear-gradient(239deg, #1caef8 -2.26%, #1c2792 96.93%);
-}
-.hero-section .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.hero-section img {
-  width: 100%;
-}
 
-.hero-section .text-group {
-  padding: 32px 0 32px 80px;
-}
-.hero-section .text-group h1 {
-  color: #fff;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 110%;
-}
-.hero-section .text-group h1 span {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.1em;
-}
-.hero-section .text-group p {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.4em;
-  padding: 48px 0 64px 0;
-}
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
-.hero-section .text-group a {
-  color: #1e1e1e;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-.hero-section .text-group a {
-  border-radius: 8px;
-  border: 2px solid #fdb614;
-  background: #fdb614;
-  padding: 16px;
-}
+  img {
+    width: 100%;
+  }
 
+  .text-group {
+    padding: 32px 0 32px 80px;
+
+    h1 {
+      color: #fff;
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 110%;
+
+      span {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.1em;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4em;
+      padding: 48px 0 64px 0;
+    }
+
+    a {
+      color: #1e1e1e;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      border-radius: 8px;
+      border: 2px solid #fdb614;
+      background: #fdb614;
+      padding: 16px;
+    }
+  }
+}
 /* #endregion Hero */
 
 /* #endregion محمد سيد */
@@ -86,117 +94,108 @@ nav li a {
 
 .cards {
   padding: 80px 16px;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 
-.cards .container {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-}
+    .text-headeng {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
 
-.cards .container .text-headeng {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+      span {
+        color: #001d6c;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 100%;
+      }
 
-.cards .container .text-headeng span {
-  color: #001d6c;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-}
+      h2 {
+        color: #21272a;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 110%;
+      }
+    }
 
-.cards .container .text-headeng h2 {
-  color: #21272a;
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
 
-.cards .container .row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
+      .col-3 {
+        padding: 0;
+        width: calc(25% - 12px);
 
-.cards .container .row .col-3 {
-  padding: 0;
-  width: calc(25% - 12px);
-}
+        .item {
+          width: 100%;
+          max-width: 308px;
+          margin-left: auto;
+          margin-right: auto;
 
-.cards .container .row .col-3 .item {
-  width: 100%;
-  max-width: 308px;
-  margin-left: auto;
-  margin-right: auto;
-}
+          .img {
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
 
-.cards .container .row .col-3 .item .img {
-  border-radius: 8px 8px 0 0;
-  overflow: hidden;
-}
+            img {
+              width: 100%;
+              transition: all 0.3s;
+              transform: scale(1.04);
 
-.cards .container .row .col-3 .item .img img {
-  width: 100%;
-  transition: all 0.3s;
-  transform: scale(1.04);
-}
+              &:hover {
+                transform: scale(1.06);
+              }
+            }
+          }
 
-.cards .container .row .col-3 .item .img img:hover {
-  transform: scale(1.06);
-}
+          .text {
+            border: 1px solid #dde1e6;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
 
-.cards .container .row .col-3 .item .text {
-  border: 1px solid #dde1e6;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-}
+            .headeng {
+              padding: 24px 16px 16px;
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
 
-.cards .container .row .col-3 .item .text .headeng {
-  padding: 16px;
-  padding-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+              h4 {
+                color: #21272a;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 110%;
+              }
 
-.cards .container .row .col-3 .item .text .headeng h4 {
-  color: #21272a;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
+              p {
+                color: #21272a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+              }
+            }
 
-.cards .container .row .col-3 .item .text .headeng p {
-  color: #21272a;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
+            .link {
+              padding: 16px;
 
-.cards .container .row .col-3 .item .text .link {
-  padding: 16px;
+              a {
+                display: flex;
+                height: 48px;
+                align-items: center;
+                gap: 16px;
+                color: #1b45b4;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-.cards .container .row .col-3 .item .text .link a {
-  display: flex;
-  height: 48px;
-  padding: 16px 0px 16px 0px;
-  align-items: center;
-  gap: 16px;
-  color: #1b45b4;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%;
-}
-
 /* #endregion Card */
 
 /* #endregion عبدالرحمن محمود */
@@ -207,34 +206,34 @@ nav li a {
 
 .review-section {
   background: linear-gradient(270deg, #454142 0.05%, #1c2792 99.95%);
-}
-.review-section .section-content .text-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-  height: 437px;
-  justify-content: center;
-}
-.review-section .section-content p {
-  width: 900px;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-.review-section .section-content span {
-  color: #fdb614;
-  font-family: Roboto;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
 
+  .section-content {
+    .text-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+      height: 437px;
+      justify-content: center;
+    }
+
+    p {
+      width: 900px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    span {
+      color: #fdb614;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 110%;
+    }
+  }
+}
 /* #endregion Man */
 
 /* #region Logo */
@@ -242,13 +241,13 @@ nav li a {
 .section-award {
   background: linear-gradient(270deg, #454142 0.02%, #1c2792 100.81%);
   padding: 80px 0;
-}
-.section-award ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 /* #endregion Logo */
 
 /* #endregion محمود مجدي */
@@ -260,58 +259,57 @@ nav li a {
 .second-section {
   padding: 60px;
   background-color: #ffffff;
-}
+  .title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #001d6c;
+  }
 
-.second-section .title {
-  font-size: 12px;
-  font-weight: bold;
-  color: #001d6c;
-}
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+  }
 
-.second-section h2 {
-  font-size: 20px;
-  font-weight: 500;
-  color: #000000;
-}
+  article {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+  }
 
-.second-section article {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 10px;
-}
+  .row {
+    text-align: center;
+    display: flex;
+    gap: 20px;
 
-.second-section .row {
-  text-align: center;
-  display: flex;
-  gap: 20px;
-}
+    .col {
+      display: block;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      padding: 16px;
+      margin-bottom: 16px;
 
-.second-section .col {
-  display: block;
-  float: center;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding: 16px;
-  margin-bottom: 16px;
-}
+      .img-item {
+        img {
+          max-width: 100%;
+          border-radius: 8px;
+          padding-top: 10px;
+        }
+      }
 
-.second-section .img-item img {
-  max-width: 100%;
-  border-radius: 8px;
-  padding-top: 10px;
-}
+      .text-group {
+        padding-top: 40px;
+        text-align: center;
 
-.second-section .text-group {
-  padding-top: 40px;
-  text-align: center;
+        p {
+          font-size: 12px;
+          color: #000000;
+        }
+      }
+    }
+  }
 }
-
-.second-section .text-group p {
-  font-size: 12px;
-  color: #000000;
-}
-
 /* #endregion Proficiency */
 
 /* #endregion محمد عبده */
@@ -322,121 +320,97 @@ nav li a {
 
 .contact {
   margin: 80px 0;
-}
+  .text-group {
+    text-align: center;
 
-.contact .text-group {
-  text-align: center;
-}
+    h4 {
+      color: #001d6c;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+    }
 
-.contact .text-group h4 {
-  color: #001d6c;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
-}
+    h2 {
+      color: #21272a;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.1em;
+      padding-top: 8px;
+    }
+  }
 
-.contact .text-group h2 {
-  color: #21272a;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.1em;
-  padding-top: 8px;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding-top: 48px;
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  padding-top: 48px;
-}
+    .input-name,
+    .input-email,
+    .input-phon,
+    .country,
+    .message {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-form .input-name {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    label {
+      color: #21272a;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4em;
+    }
 
-form .input-email {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    input,
+    select,
+    textarea {
+      border: none;
+    }
 
-form .input-phon {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    input,
+    select {
+      height: 48px;
+      padding: 12px 16px;
+      width: 700px;
+      background-color: #f2f4f8;
+      border-bottom: 1px solid #c1c7cd;
+      color: #697077;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4em;
+    }
 
-form .country {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    textarea {
+      height: 96px;
+      padding: 14px 16px;
+      width: 700px;
+      background-color: #f2f4f8;
+      border-bottom: 1px solid #c1c7cd;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4em;
+    }
 
-form .message {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    button {
+      height: 48px;
+      padding: 16px 28px;
+      background-color: #fdb614;
+      border-radius: 8px;
+      border: 1px solid #fdb614;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: #21272a;
 
-form label {
-  color: #21272a;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4em;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
 }
-
-input,
-select,
-textarea {
-  border: none;
-}
-
-form input,
-select {
-  height: 48px;
-  padding: 12px 16px;
-  width: 700px;
-  background-color: #f2f4f8;
-  border-bottom: 1px solid#C1C7CD;
-  align-self: stretch;
-  color: #697077;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4em;
-}
-
-form textarea {
-  height: 96px;
-  padding: 14px 16px;
-  width: 700px;
-  background-color: #f2f4f8;
-  border-bottom: 1px solid#C1C7CD;
-  align-self: stretch;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4em;
-}
-
-form button {
-  height: 48px;
-  padding: 16px 28px;
-  background-color: #fdb614;
-  border-radius: 8px;
-  border: 1px solid#FDB614;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  color: #21272a;
-}
-
-form button:hover {
-  background-color: #fff;
-}
-
 /* #endregion Form */
 
 /* #region Footer */
@@ -444,15 +418,15 @@ form button:hover {
 footer {
   background-color: #454142;
   padding: 24px 0;
-}
-footer p {
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4em;
-}
 
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+}
 /* #endregion Footer */
 
 /* #endregion محمد عصام */
